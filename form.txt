@@ -6,7 +6,7 @@
                         </li>
                         <li>
                             <div class="text">
-                                <span>��名 Name<i style="display: none;" class="icon iconfont icon-shuoming"></i></span>
+                                <span>姓名 Name<i style="display: none;" class="icon iconfont icon-shuoming"></i></span>
                                 <input v-model="realname" readonly type="text" placeholder=""></div>
                         </li>
                         <li>
