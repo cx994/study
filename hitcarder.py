@@ -91,12 +91,10 @@ class HitCarder(object):
         with open("form.txt","r",encoding="utf-8") as f:
             print(f.read())
             print("test,end")
+            print("是否相同：{}".f(new_form==f.read()))
             if new_form == f.read():
                 return True
             else:
-#                 with open("form.txt", "w", encoding="utf-8") as f:
-#                     f.write(new_form)
-#                 return True
                 print(f.read())
                 print("form end")
                 print("new_form:\n")
