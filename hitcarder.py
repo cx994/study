@@ -91,9 +91,14 @@ class HitCarder(object):
             if new_form == f.read():
                 return True
             else:
-                with open("form.txt", "w", encoding="utf-8") as f:
-                    f.write(new_form)
-                return True
+#                 with open("form.txt", "w", encoding="utf-8") as f:
+#                     f.write(new_form)
+#                 return True
+                content1=f.read()
+                print(content1)
+                print("==============\n")
+                print(new_form)
+                return false
 
     def get_info(self, html=None):
         """Get hit card info, which is the old info with updated new time."""
