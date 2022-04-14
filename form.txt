@@ -1,4 +1,4 @@
-<ul>ddddddddddd
+<ul>
                         <li>
                             <div class="text">
                                 <span>今日日期 Date<i style="display: none;" class="icon iconfont icon-shuoming"></i></span>
@@ -323,51 +323,3 @@
                                 </div>
                                 <input name="jnmddxiangxi" v-model="info.jnmddxiangxi" type="text" placeholder="详细地址 Detailed address" class="hcqbtn-wrap-input">
                             </div>
-                        </li>
-                        <li v-show="sfzgn == 0 && info.sfyrjjh == 1">
-                            <div name="rjjtfs" class="radio"><span>入境交通方式 Mode of transport by which you enter Chinese Mainland<i class="icon iconfont icon-shuoming"></i><em></em></span>
-                                <div>
-                                    <div @click="info.rjjtfs=1"><span :class="{active: info.rjjtfs==1}"><i></i></span> <span>飞机 By plane</span></div>
-                                    <div @click="info.rjjtfs=2"><span :class="{active: info.rjjtfs == 2}"><i></i></span> <span>火车 By train</span></div>
-                                    <div @click="info.rjjtfs=4"><span :class="{active: info.rjjtfs == 4}" style="position: relative;top: 0.2rem;"><i></i></span> <span style="position: relative;top: 0.1rem;">其他 Other</span>
-                                    <input name="rjjtfs1" type="text" v-model="info.rjjtfs1" placeholder="请输入 Please enter" class="hcqbtn" style="margin-left: 0.2rem;width: 60%;">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li v-show="sfzgn == 0 && info.sfyrjjh == 1">
-                            <div class="text">
-                                <span>入境交通工具班次（航班号，火车车次） Details of the inbound transportation (Flight number, train number)<i class="icon iconfont icon-shuoming"></i></span>
-                                <input name="rjjtgjbc" v-model="info.rjjtgjbc" type="text" placeholder="多个用逗号隔开 Separate by commas if more than one"></div>
-                        </li>
-                        <li v-show="sfzgn == 0 && info.sfyrjjh == 1">
-                            <div name="jnjtfs" class="radio"><span>境内交通方式 Mode of transport in Chinese Mainland <i class="icon iconfont icon-shuoming"></i><em></em></span>
-                                <div>
-                                    <div @click="info.jnjtfs=1"><span :class="{active: info.jnjtfs==1}"><i></i></span> <span>飞机 By plane</span></div>
-                                    <div @click="info.jnjtfs=2"><span :class="{active: info.jnjtfs == 2}"><i></i></span> <span>火车 By train</span></div>
-                                    <div @click="info.jnjtfs=3"><span :class="{active: info.jnjtfs == 3}"><i></i></span> <span>汽车 By coach</span></div>
-                                    <div @click="info.jnjtfs=4"><span :class="{active: info.jnjtfs == 4}" style="position: relative;top: 0.2rem;"><i></i></span> <span style="position: relative;top: 0.1rem;">其他 Other</span>
-                                        <input name="jnjtfs1" type="text" v-model="info.jnjtfs1" placeholder="请输入 Please enter" class="hcqbtn" style="margin-left: 0.2rem;width: 60%;">
-                                </div>
-                            </div>
-                        </li>
-                        <li v-show="sfzgn == 0 && info.sfyrjjh == 1">
-                            <div class="text">
-                                <span>境内交通工具班次（航班号，火车车次，汽车牌照） Transportation details in Chinese Mainland (Flight number, train number, license plate)<i class="icon iconfont icon-shuoming"></i></span>
-                                <input name="jnjtgjbc" v-model="info.jnjtgjbc" type="text" placeholder="多个用逗号隔开 Separate by commas if more than one"></div>
-                        </li>
-                        <li>
-                             <div name="sfqrxxss" class="radio">
-                                <div>
-                                    <div @click="info.sfqrxxss = 1"><span  :class="{active: info.sfqrxxss == 1}">
-                                            <i></i></span> <span>本人承诺：</br>
-                                        上述信息真实准确。如有变化，及时更新相关信息并报告所在单位。</br>
-                                        本人已知晓并将遵守政府和学校相关规定，配合做好疫情防控工作。</br>
-                                            I agree:</br>
-                                            The above information is true and accurate. In case of changes, I will keep my information updated and report in a timely manner.</br>
-                                            I have understood and will abide by the relevant government and University regulations to facilitate the prevention and control of COVID-19 epidemic.</br>
-                                        </span></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
