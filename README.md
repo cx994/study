@@ -1,8 +1,8 @@
-# ZJU-nCov-Hitcarder-Sample
+# study
 
-浙大nCov肺炎健康打卡定时自动脚本 
+study
 
-forked from [Tishacy/ZJU-nCov-Hitcarder](https://github.com/Tishacy/ZJU-nCov-Hitcarder)
+
 
 # Sample .yml
 
@@ -20,6 +20,3 @@ forked from [Tishacy/ZJU-nCov-Hitcarder](https://github.com/Tishacy/ZJU-nCov-Hit
          serverchan_key: ${{ secrets.SERVERCHAN_KEY }}
 ```
 
-# Sample Repository
-
-https://github.com/Long0x0/ZJU-nCov-Hitcarder-Sample
