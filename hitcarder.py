@@ -96,7 +96,7 @@ class HitCarder(object):
 #                 return True
                 content1=f.read()
                 print(content1)
-                print("==============\n")
+                print("new_form:\n")
                 print(new_form)
                 return false
 
