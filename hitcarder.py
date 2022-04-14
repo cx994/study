@@ -91,7 +91,7 @@ class HitCarder(object):
         with open("form.txt","r",encoding="utf-8") as f:
             print(f.read())
             print("test,end")
-            print("是否相同：{}".f(new_form==f.read()))
+            print(new_form == f.read())
             if new_form == f.read():
                 return True
             else:
@@ -222,9 +222,9 @@ if __name__ == "__main__":
     password = os.environ['PASSWORD']
 
     ret, msg = main(username, password)
-    print("test start...........\n")
-    with open("./form.txt","r+",encoding="utf-8") as f:
-        print(f.read())
+#     print("test start...........\n")
+#     with open("./form.txt","r+",encoding="utf-8") as f:
+#         print(f.read())
     print(ret, msg)
     if ret == 1:
         time.sleep(5)
