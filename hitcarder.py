@@ -96,10 +96,10 @@ class HitCarder(object):
 #                     f.write(new_form)
 #                 return True
                 print(f.read())
-                
+                print("form end")
                 print("new_form:\n")
                 print(new_form)
-                return False
+                return True
 
     def get_info(self, html=None):
         """Get hit card info, which is the old info with updated new time."""
