@@ -86,20 +86,17 @@ class HitCarder(object):
             new_form = re.findall(r'<ul>[\s\S]*?</ul>', html)[0]
         except IndexError as _:
             raise RegexMatchError('Relative info not found in html with regex')
-
-        
-        with open("form.txt","r",encoding="utf-8") as f:
-            print(f.read())
-            print("test,end")
-            print(new_form == f.read())
-            if new_form == f.read():
+#         old_form = None
+        with open("form.txt", "r", encoding="utf-8") as f:
+#             old_form = f.read()
+            if new_form.strip() == f.read().strip():
                 return True
-            else:
-                print(f.read())
-                print("form end")
-                print("new_form:\n")
-                print(new_form)
-                return True
+        # with open("form.txt", "w", encoding="utf-8") as f:
+        #    f.write(new_form)
+#         print(new_form)
+#         print('='*100)
+#         print(old_form)
+        return False
 
     def get_info(self, html=None):
         """Get hit card info, which is the old info with updated new time."""
@@ -142,6 +139,7 @@ class HitCarder(object):
         new_info['sfzx'] = old_info['sfzx'] # 在校
         new_info['sfymqjczrj'] = old_info['sfymqjczrj'] # 入境
         new_info['sfqrxxss'] = 1 # 属实
+        new_info['campus'] = old_info['campus']
 
         self.info = new_info
         # print(json.dumps(self.info))
@@ -222,9 +220,6 @@ if __name__ == "__main__":
     password = os.environ['PASSWORD']
 
     ret, msg = main(username, password)
-#     print("test start...........\n")
-#     with open("./form.txt","r+",encoding="utf-8") as f:
-#         print(f.read())
     print(ret, msg)
     if ret == 1:
         time.sleep(5)
