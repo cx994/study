@@ -33,6 +33,7 @@ class HitCarder(object):
         self.save_url = "https://healthreport.zju.edu.cn/ncov/wap/default/save"
         self.captcha_url = "https://healthreport.zju.edu.cn/ncov/wap/default/code"
         self.sess = requests.Session()
+        self.ocr = ddddocr.DdddOcr()
         self.sess.keep_alive = False
         retry = Retry(connect=3, backoff_factor=0.5)
         adapter = HTTPAdapter(max_retries=retry)
@@ -77,7 +78,7 @@ class HitCarder(object):
     
     def get_captcha(self):
         """Get CAPTCHA code"""
-        cookie_dict = {'eai-sess': '9k1adtbd8ti87t488f786vvtl3'}
+        cookie_dict = {'eai-sess': 'gfu0h64kb803d8m5qd242ad657'}
         self.sess.cookies = requests.cookies.cookiejar_from_dict(cookie_dict)
         resp = self.sess.get(self.captcha_url)
         captcha = self.ocr.classification(resp.content)
@@ -155,7 +156,7 @@ class HitCarder(object):
         new_info['sfymqjczrj'] = old_info['sfymqjczrj'] # 入境
         new_info['sfqrxxss'] = 1 # 属实
         new_info['campus'] = old_info['campus']
-        new_info['captcha'] = 
+        new_info['verifyCode'] = self.get_captcha()
 
         self.info = new_info
         # print(json.dumps(self.info))
